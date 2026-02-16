@@ -189,13 +189,10 @@ textarea {
 }
 
 .logo-mark {
-    font-size: var(--font-size-xl);
+    font-size: 1.75rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text-primary);
 }
 
 .nav-links {
@@ -342,7 +339,7 @@ textarea {
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-sm);
-    padding: 0.4rem 1rem 0.4rem 0.75rem;
+    padding: 0.4rem 1rem;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-full);
@@ -375,10 +372,7 @@ textarea {
 }
 
 .hero-title-gradient {
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-mid), var(--color-gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text-secondary);
 }
 
 .hero-subtitle {
@@ -416,13 +410,10 @@ textarea {
 .btn-primary {
     background: var(--color-accent);
     color: white;
-    box-shadow: 0 0 0 0 var(--color-accent-glow);
 }
 
 .btn-primary:hover {
     background: var(--color-accent-hover);
-    box-shadow: 0 0 30px 4px var(--color-accent-glow);
-    transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -605,22 +596,12 @@ textarea {
 }
 
 .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-accent-glow), transparent);
-    opacity: 0;
-    transition: opacity var(--transition-slow);
+    display: none;
 }
 
 .service-card:hover {
     background: var(--color-bg-card-hover);
     border-color: var(--color-border-hover);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-glow);
 }
 
 .service-card:hover::before {
@@ -642,8 +623,7 @@ textarea {
 }
 
 .service-card:hover .service-icon {
-    background: var(--color-accent-glow);
-    border-color: rgba(41, 151, 255, 0.2);
+    border-color: var(--color-border-hover);
 }
 
 .service-title {
@@ -729,7 +709,7 @@ textarea {
     height: 8px;
     background: var(--color-accent);
     border-radius: 50%;
-    box-shadow: 0 0 12px var(--color-accent-glow);
+    box-shadow: none;
 }
 
 .process-step-content h3 {
@@ -769,8 +749,6 @@ textarea {
 
 .work-card:hover {
     border-color: var(--color-border-hover);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
 }
 
 .work-card-large {
@@ -941,7 +919,6 @@ textarea {
 
 .testimonial-card:hover {
     border-color: var(--color-border-hover);
-    transform: translateY(-2px);
 }
 
 .testimonial-stars {
@@ -969,13 +946,14 @@ textarea {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: var(--font-size-xs);
     font-weight: 700;
-    color: white;
+    color: var(--color-text-secondary);
     flex-shrink: 0;
 }
 
@@ -1057,17 +1035,13 @@ textarea {
 
 .metric-card:hover {
     border-color: var(--color-border-hover);
-    transform: translateY(-2px);
 }
 
 .metric-number {
     font-size: var(--font-size-4xl);
     font-weight: 700;
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text-primary);
     margin-bottom: var(--spacing-xs);
 }
 
