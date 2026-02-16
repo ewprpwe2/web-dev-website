@@ -189,13 +189,10 @@ textarea {
 }
 
 .logo-mark {
-    font-size: var(--font-size-xl);
+    font-size: 1.75rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text-primary);
 }
 
 .nav-links {
@@ -375,10 +372,7 @@ textarea {
 }
 
 .hero-title-gradient {
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-mid), var(--color-gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text-secondary);
 }
 
 .hero-subtitle {
