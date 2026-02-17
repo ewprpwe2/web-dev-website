@@ -1116,6 +1116,106 @@ textarea {
     font-weight: 400;
 }
 
+/* Legal Page Nav */
+.legal-nav {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.legal-nav a {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-tertiary);
+    transition: color var(--transition-fast);
+}
+
+.legal-nav a:hover {
+    color: var(--color-text-primary);
+}
+
+/* ============================================
+   Legal Pages
+   ============================================ */
+.legal-page {
+    padding: 10rem 0 var(--spacing-5xl);
+}
+
+.legal-header {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.legal-header .section-tag {
+    text-align: left;
+}
+
+.legal-header .section-title {
+    text-align: left;
+}
+
+.legal-updated {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-tertiary);
+    margin-top: var(--spacing-sm);
+}
+
+.legal-content {
+    max-width: 760px;
+}
+
+.legal-content h2 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.01em;
+}
+
+.legal-content h3 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.legal-content p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.legal-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--spacing-md);
+}
+
+.legal-content ul li {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    padding-left: var(--spacing-xl);
+    position: relative;
+}
+
+.legal-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.legal-content strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
 /* ============================================
    Responsive Design
    ============================================ */
