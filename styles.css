@@ -313,17 +313,6 @@ textarea {
     overflow: hidden;
 }
 
-.hero-bg-grid {
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-    background-size: 72px 72px;
-    mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, black 10%, transparent 70%);
-    -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, black 10%, transparent 70%);
-}
-
 .hero-content {
     max-width: 900px;
     text-align: center;
@@ -424,42 +413,32 @@ textarea {
     justify-content: center;
 }
 
-/* Hero Stats */
-.hero-stats {
+/* Hero Capabilities */
+.hero-capabilities {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-xl);
 }
 
-.hero-stat {
-    text-align: center;
-}
-
-.hero-stat-number {
-    font-size: var(--font-size-3xl);
-    font-weight: 700;
-    color: var(--color-text-primary);
-    letter-spacing: -0.02em;
-}
-
-.hero-stat-suffix {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    color: var(--color-text-primary);
-}
-
-.hero-stat-label {
-    display: block;
+.hero-capability {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
     font-size: var(--font-size-sm);
+    font-weight: 500;
     color: var(--color-text-tertiary);
-    margin-top: var(--spacing-xs);
-    font-weight: 400;
+    letter-spacing: 0.01em;
 }
 
-.hero-stat-divider {
+.hero-capability svg {
+    color: var(--color-accent);
+    opacity: 0.7;
+}
+
+.hero-capability-divider {
     width: 1px;
-    height: 48px;
+    height: 20px;
     background: var(--color-border);
 }
 
@@ -809,37 +788,51 @@ textarea {
     flex-shrink: 0;
 }
 
-.about-metrics {
+/* Certification Cards */
+.about-certifications {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
 }
 
-.metric-card {
+.cert-card {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-2xl);
-    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
     transition: all var(--transition-slow);
 }
 
-.metric-card:hover {
+.cert-card:hover {
     border-color: var(--color-border-hover);
 }
 
-.metric-number {
-    font-size: var(--font-size-4xl);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: var(--color-text-primary);
-    margin-bottom: var(--spacing-xs);
+.cert-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-accent);
+    flex-shrink: 0;
 }
 
-.metric-label {
+.cert-label {
     font-size: var(--font-size-sm);
-    color: var(--color-text-tertiary);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+}
+
+.cert-label span {
     font-weight: 400;
+    color: var(--color-text-tertiary);
 }
 
 /* ============================================
@@ -885,6 +878,28 @@ textarea {
     margin: 0 auto var(--spacing-2xl);
     line-height: 1.7;
     position: relative;
+}
+
+.cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+    position: relative;
+}
+
+.cta-email {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-tertiary);
+}
+
+.cta-email a {
+    color: var(--color-accent);
+    transition: color var(--transition-fast);
+}
+
+.cta-email a:hover {
+    color: var(--color-accent-hover);
 }
 
 .cta-card .btn {
@@ -1135,7 +1150,7 @@ textarea {
         gap: var(--spacing-3xl);
     }
 
-    .about-metrics {
+    .about-certifications {
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -1196,14 +1211,13 @@ textarea {
         min-height: auto;
     }
 
-    .hero-stats {
+    .hero-capabilities {
         flex-direction: column;
-        gap: var(--spacing-xl);
+        gap: var(--spacing-md);
     }
 
-    .hero-stat-divider {
-        width: 48px;
-        height: 1px;
+    .hero-capability-divider {
+        display: none;
     }
 
     .services-grid {
@@ -1227,7 +1241,7 @@ textarea {
         font-size: var(--font-size-xs);
     }
 
-    .about-metrics {
+    .about-certifications {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -1268,7 +1282,7 @@ textarea {
         grid-template-columns: 1fr;
     }
 
-    .about-metrics {
+    .about-certifications {
         grid-template-columns: 1fr 1fr;
     }
 
