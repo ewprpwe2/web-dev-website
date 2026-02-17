@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M6 8l8 8-8 8' stroke='%232997ff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' opacity='.3'/%3E%3Cpath d='M12 8l8 8-8 8' stroke='%232997ff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' opacity='.6'/%3E%3Cpath d='M18 8l8 8-8 8' stroke='%232997ff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M16 3L28 10L16 17L4 10Z' fill='%232997ff' fill-opacity='0.15' stroke='%232997ff' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M4 10L16 17L16 31L4 24Z' fill='%232997ff' fill-opacity='0.07' stroke='%232997ff' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M28 10L28 24L16 31L16 17Z' fill='%232997ff' fill-opacity='0.1' stroke='%232997ff' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E">
 </head>
 <body>
     <!-- Accent Line -->
@@ -21,9 +21,12 @@
             <a href="#" class="nav-logo">
                 <div class="logo-mark">
                     <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none">
-                        <path d="M6 8l8 8-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
-                        <path d="M12 8l8 8-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.65"/>
-                        <path d="M18 8l8 8-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 3L28 10L16 17L4 10Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                        <path d="M4 10L16 17L16 31L4 24Z" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                        <path d="M28 10L28 24L16 31L16 17Z" fill="currentColor" fill-opacity="0.07" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                        <text x="16" y="10" font-family="Inter,sans-serif" font-size="5.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="central">R</text>
+                        <text x="10" y="20.5" font-family="Inter,sans-serif" font-size="5.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="central">G</text>
+                        <text x="22" y="20.5" font-family="Inter,sans-serif" font-size="5.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="central">D</text>
                     </svg>
                     <span class="logo-text">GDR</span>
                 </div>
@@ -45,6 +48,13 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <div class="hero-watermark" aria-hidden="true">
+            <svg width="600" height="600" viewBox="0 0 32 32" fill="none">
+                <path d="M16 3L28 10L16 17L4 10Z" stroke="rgba(41,151,255,0.07)" stroke-width="0.3" fill="none"/>
+                <path d="M4 10L16 17L16 31L4 24Z" stroke="rgba(41,151,255,0.07)" stroke-width="0.3" fill="none"/>
+                <path d="M28 10L28 24L16 31L16 17Z" stroke="rgba(41,151,255,0.07)" stroke-width="0.3" fill="none"/>
+            </svg>
+        </div>
         <div class="hero-content">
             <div class="hero-badge animate-on-scroll">
                 Enterprise Software &middot; Security &middot; Compliance
@@ -284,6 +294,31 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-content animate-on-scroll">
+                    <div class="about-logo">
+                        <svg class="logo-cube-large" width="120" height="120" viewBox="0 0 32 32" fill="none">
+                            <defs>
+                                <linearGradient id="topFace" x1="4" y1="10" x2="28" y2="3" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#2997ff" stop-opacity="0.2"/>
+                                    <stop offset="100%" stop-color="#2997ff" stop-opacity="0.12"/>
+                                </linearGradient>
+                                <linearGradient id="leftFace" x1="4" y1="10" x2="16" y2="31" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#2997ff" stop-opacity="0.1"/>
+                                    <stop offset="100%" stop-color="#2997ff" stop-opacity="0.04"/>
+                                </linearGradient>
+                                <linearGradient id="rightFace" x1="28" y1="10" x2="16" y2="31" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#2997ff" stop-opacity="0.15"/>
+                                    <stop offset="100%" stop-color="#2997ff" stop-opacity="0.06"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M16 3L28 10L16 17L4 10Z" fill="url(#topFace)" stroke="#2997ff" stroke-width="0.8" stroke-linejoin="round"/>
+                            <path d="M4 10L16 17L16 31L4 24Z" fill="url(#leftFace)" stroke="#2997ff" stroke-width="0.8" stroke-linejoin="round"/>
+                            <path d="M28 10L28 24L16 31L16 17Z" fill="url(#rightFace)" stroke="#2997ff" stroke-width="0.8" stroke-linejoin="round"/>
+                            <text x="16" y="10" font-family="Inter,sans-serif" font-size="5.5" font-weight="700" fill="#2997ff" text-anchor="middle" dominant-baseline="central">R</text>
+                            <text x="10" y="20.5" font-family="Inter,sans-serif" font-size="5.5" font-weight="700" fill="#2997ff" text-anchor="middle" dominant-baseline="central">G</text>
+                            <text x="22" y="20.5" font-family="Inter,sans-serif" font-size="5.5" font-weight="700" fill="#2997ff" text-anchor="middle" dominant-baseline="central">D</text>
+                        </svg>
+                        <span class="about-logo-text">GDR Software Development</span>
+                    </div>
                     <span class="section-tag">About GDR</span>
                     <h2 class="section-title">Built by engineers<br>who've been in the trenches.</h2>
                     <p class="about-text">GDR Software Development was founded on a simple principle: organisations shouldn't have to choose between moving fast and staying compliant. Our team combines deep engineering expertise with regulatory knowledge to deliver software that does both.</p>
@@ -429,9 +464,12 @@
                 <div class="footer-brand">
                     <div class="logo-mark">
                         <svg class="logo-icon" width="24" height="24" viewBox="0 0 32 32" fill="none">
-                            <path d="M6 8l8 8-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
-                            <path d="M12 8l8 8-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.65"/>
-                            <path d="M18 8l8 8-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 3L28 10L16 17L4 10Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                            <path d="M4 10L16 17L16 31L4 24Z" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                            <path d="M28 10L28 24L16 31L16 17Z" fill="currentColor" fill-opacity="0.07" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                            <text x="16" y="10" font-family="Inter,sans-serif" font-size="5.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="central">R</text>
+                            <text x="10" y="20.5" font-family="Inter,sans-serif" font-size="5.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="central">G</text>
+                            <text x="22" y="20.5" font-family="Inter,sans-serif" font-size="5.5" font-weight="700" fill="currentColor" text-anchor="middle" dominant-baseline="central">D</text>
                         </svg>
                         <span class="logo-text">GDR</span>
                     </div>
