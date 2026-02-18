@@ -93,6 +93,21 @@ body {
     overflow-x: hidden;
 }
 
+/* Isometric Grid Background */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 15L30 30L0 15Z' fill='none' stroke='%232997ff' stroke-width='0.3' opacity='0.08'/%3E%3Cpath d='M30 30L60 45L30 60L0 45Z' fill='none' stroke='%232997ff' stroke-width='0.3' opacity='0.08'/%3E%3C/svg%3E");
+    background-size: 60px 60px;
+    opacity: 0.3;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -313,6 +328,17 @@ textarea {
     overflow: hidden;
 }
 
+/* Hero Watermark */
+.hero-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 0;
+}
+
 .hero-content {
     max-width: 900px;
     text-align: center;
@@ -516,7 +542,7 @@ textarea {
 .service-card:hover {
     background: var(--color-bg-card-hover);
     border-color: var(--color-border-hover);
-    transform: translateY(-2px);
+    transform: perspective(800px) rotateX(1deg) rotateY(-1deg) translateY(-2px);
 }
 
 .service-card:hover::before {
@@ -678,7 +704,7 @@ textarea {
 .industry-card:hover {
     background: var(--color-bg-card-hover);
     border-color: var(--color-border-hover);
-    transform: translateY(-2px);
+    transform: perspective(800px) rotateX(1deg) rotateY(-1deg) translateY(-2px);
 }
 
 .industry-card:hover::before {
@@ -786,6 +812,25 @@ textarea {
 .about-value-icon {
     color: #34d399;
     flex-shrink: 0;
+}
+
+/* About Logo */
+.about-logo {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.logo-cube-large {
+    display: block;
+    margin-bottom: var(--spacing-md);
+}
+
+.about-logo-text {
+    display: block;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
 }
 
 /* Principle Cards */
@@ -1235,6 +1280,14 @@ textarea {
         gap: var(--spacing-3xl);
     }
 
+    .about-logo {
+        text-align: center;
+    }
+
+    .logo-cube-large {
+        margin: 0 auto var(--spacing-md);
+    }
+
     .about-principles {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -1294,6 +1347,11 @@ textarea {
         padding-top: 120px;
         padding-bottom: var(--spacing-3xl);
         min-height: auto;
+    }
+
+    .hero-watermark svg {
+        width: 300px;
+        height: 300px;
     }
 
     .hero-capabilities {
@@ -1398,6 +1456,15 @@ textarea {
 
     .animate-on-scroll {
         opacity: 1;
+        transform: none;
+    }
+
+    .hero-watermark {
+        display: none;
+    }
+
+    .service-card:hover,
+    .industry-card:hover {
         transform: none;
     }
 }
